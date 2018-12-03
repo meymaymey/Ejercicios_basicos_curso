@@ -144,3 +144,35 @@ function nota(){
 }
 
 //5. Hacer un programa que nos muestre todos los días de la semana.
+
+function semanaDias(){
+    var i="Domingo";
+    var j="Lunes";
+    var k ="Martes";
+    var l="Miercoles";
+    var m="Jueves";
+    var n="Viernes";
+    var o="Sábado";
+        alert(i);
+        alert(j);
+        alert(k);
+        alert(l);
+        alert(m);
+        alert(n);
+        alert(o);
+    }
+//6. Hacer un programa que nos muestre los 100 primeros números.
+
+function numeros(){
+    var text,x;
+    var text = "";
+    x=0;
+        while (x <=100){ 
+            text += +x;
+            x++;
+        }
+        
+    document.getElementById("numeros").innerHTML = text;
+    
+}
+
