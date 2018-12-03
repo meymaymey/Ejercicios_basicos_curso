@@ -1,11 +1,11 @@
 
 //INTRODUCCION
  
-function holamundo(){
+function holaMundo(){
     alert("Hola, Mundo!");
 }
 
-function holamundoconsole(){
+function holaMundoConsole(){
     console.log("Hola Mundo!");
 }
 //VARIABLES
@@ -53,6 +53,8 @@ function mayusculas(){
     document.getElementById("mayusculas").innerHTML = cadena;
 }
 
+//ARRAYS
+
 function diasSemana(){
     var meses = new Array
     ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre",
@@ -63,3 +65,82 @@ function diasSemana(){
     document.write(diasSemana[f.getDay()] + ", " + f.getDate() + " de " 
     + meses[f.getMonth()] + " de " + f.getFullYear());
 }
+
+/*1. Crear un programa donde podamos introducir una hora y comprobandola con las 12 del 
+mediodía nos indique si son buenos días o buenas tardes.*/
+
+function horaBdias(){
+   var hora = new Date().getHours();
+   var saludo;
+   if (hora < 13){
+       saludo = "Buenos días";
+   } else {
+       saludo= "Buenas tardes";
+   }
+   document.getElementById("horaBdias").innerHTML = saludo;
+}
+
+//2. Hacer un programa que nos diga el día de la semana en el que nos encontramos
+
+function diaSemana(){
+    var day;
+    switch (new Date().getDay()){
+        case 0:
+            day = "Domingo";
+            break;
+        case 1:
+            day = "Lunes";
+            break;
+        case 2:
+            day= "Martes";
+            break;
+        case 3:
+            day= "Miercoles";
+            break;
+        case 4:
+            day = "Jueves";
+            break;
+        case 5:
+            day = "Viernes";
+            break;
+        case 6:
+            day = "Sabado";
+    }
+    document.getElementById("diaSemana").innerHTML = "Hoy es " +day; 
+}
+
+//3. Hacer un programa en el que podamos introducir una nota y según ésta nos diga si está aprobado o no.
+/* 4. Hacer un programa similar al anterior pero que además nos diga si está suspendo, aprobado, notable, 
+sobresaliente o matrícula de honor.*/
+
+function nota(){
+    var nota = 10;
+        var mensaje = " ";
+        switch (nota){
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                mensaje = "Suspenso";
+                break;
+            case 5:
+                mensaje ="Suficiente";
+                break;
+            case 6:
+                mensaje ="Bien";
+                break;
+            case 7:
+            case 8:
+                mensaje= "Notable";
+                break;
+            case 9:
+                mensaje ="Sobresaliente";
+                break;
+            default:
+                mensaje = "El calor no es valido";
+        }    
+                document.getElementById("diaSemana").innerHTML = "Ha sacado un " +nota; 
+}
+
+//5. Hacer un programa que nos muestre todos los días de la semana.
